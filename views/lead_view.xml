@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="mail_crm_stats.crm_lead_form">
+            <field name="name">mail_crm_stats.crm_lead.form</field>
+            <field name="model">crm.lead</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@string='Extra Info']" position="after">
+                    <page string="Emails sent">
+                        <group name="emails">
+                            <div>
+                                <field name="emails" nolabel="1" class="oe_inline"/>
+                            </div>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
